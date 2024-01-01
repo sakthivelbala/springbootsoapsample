@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sakthivel.com/spring/soap/api/test"
+	xmlns:tns="http://www.sakthivel.com/spring/soap/api/test"
+	elementFormDefault="qualified">
+
+	<xsd:element name="TestRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="name" type="xsd:string" />
+				<xsd:element name="age" type="xsd:int" />
+				<xsd:element name="phone" type="xsd:string" />
+				<xsd:element name="company" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="TestResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="isEligible" type="xsd:boolean" />
+				<xsd:element name="for" type="xsd:string" />
+				<xsd:element name="reason" type="xsd:string" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
